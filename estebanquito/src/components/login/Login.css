@@ -1,0 +1,35 @@
+
+
+
+h1{
+    font-size: 50px;
+    color: green;
+}
+
+#botones{
+    margin: 20px;
+}
+
+#btnRegistro{
+    background-color: lightgreen;
+    margin-left: 12px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#btnIniciar{
+    background-color: lightgreen;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.login-info{
+    font-size: 35px;
+    border-radius: 20px;
+    border: 0;
+    background-color: lightgray;
+}
+
+

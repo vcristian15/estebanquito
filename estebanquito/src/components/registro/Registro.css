@@ -1,0 +1,18 @@
+h1{
+    font-size: 50px;
+}
+
+#btnCrear{
+    background-color: lightgreen;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#btnIniciar{
+    background-color: lightgreen;
+    margin-left: 12px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 0;
+}

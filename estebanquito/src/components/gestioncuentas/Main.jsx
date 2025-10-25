@@ -20,11 +20,16 @@ import './Main.css'
             <div id="right">
 
                 <div id="gestioncuenta">
-                    <h1 id='titulomain'>Estebanquito</h1>
-                    <h1  id='tipocuenta'>Tipo de cuenta:</h1>
-                    <p  id='numerocuenta'>Nº 123456789</p>
-                    <h2 id='saldo'>Saldo: $000000</h2>
-                    <a href="" id='Detalles'>Detalles</a>
+                    <div id='header'>
+                        <h1 id='titulomain'>Estebanquito</h1>
+                    </div>
+
+                    <div id='box-cuenta'>
+                        <h1  id='tipocuenta'>Tipo de cuenta:</h1>
+                        <p  id='numerocuenta'>Nº 123456789</p>
+                        <h2 id='saldo'>Saldo: $000000</h2>
+                        <a href="" id='Detalles'>Detalles</a>
+                    </div>
                 </div>
 
                 <div id="transacciones">

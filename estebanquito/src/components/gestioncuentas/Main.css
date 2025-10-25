@@ -173,3 +173,7 @@ body{
 #box-prestamos{
     display: flex;
 }
+
+#box-cuenta{
+    align-self: flex-start;
+}

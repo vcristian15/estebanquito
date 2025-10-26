@@ -24,11 +24,24 @@ import './Main.css'
                         <h1 id='titulomain'>Estebanquito</h1>
                     </div>
 
-                    <div id='box-cuenta'>
-                        <h1  id='tipocuenta'>Tipo de cuenta:</h1>
-                        <p  id='numerocuenta'>Nº 123456789</p>
-                        <h2 id='saldo'>Saldo: $000000</h2>
-                        <a href="" id='Detalles'>Detalles</a>
+                    <div id='box-contenido'> 
+
+                        <div  id='box-cuenta'>
+                            <h1  id='tipocuenta'>Tipo de cuenta:</h1>
+                            <p  id='numerocuenta'>Nº 123456789</p>
+                            <h2 id='saldo'>Saldo: $000000</h2>
+                            <a href="" id='Detalles'>Detalles</a>
+                        </div>
+
+                        <div id='box-movimientos'>
+
+                            <h2>Ultimos 5 movimientos</h2>
+                            <p class='movimientos'>-10000$</p>
+                            <p class='movimientos'>+10000$</p>
+                            <p class='movimientos'>+10000$</p>
+                            <p class='movimientos'>-10000$</p>
+                            <p class='movimientos'>-10000$</p>
+                        </div>
                     </div>
                 </div>
 

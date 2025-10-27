@@ -9,14 +9,16 @@ function Pagos(){
         <div id="container">
             <div id='box'>
                 <div id="titulo">   
-                    <h1>Transferencias</h1>
+                    <h1>Pagos</h1>
                 </div>
 
                 <div id="info">
 
+                        <h1 id='deuda'>Deuda: $00000</h1>
+
                     <div id="id">
                         <input type="text" 
-                            placeholder="Número de cuenta"
+                            placeholder="Número de identificacion"
                             class='login-info'  
                         />
 
@@ -25,7 +27,7 @@ function Pagos(){
                     <div id="email">
 
                         <input type="text" 
-                            placeholder="$ 0"
+                            placeholder="Monto a pagar"
                             class='login-info'
                         />
 

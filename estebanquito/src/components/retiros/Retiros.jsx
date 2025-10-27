@@ -9,10 +9,12 @@ function Retiros(){
         <div id="container">
             <div id='box'>
                 <div id="titulo">   
-                    <h1>Transferencias</h1>
+                    <h1>Retiros</h1>
                 </div>
 
                 <div id="info">
+
+                    <h1 id='saldo-disp'>Saldo disponible: $00000</h1>
 
                     <div id="id">
                         <input type="text" 

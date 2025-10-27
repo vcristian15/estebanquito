@@ -59,14 +59,14 @@ import './Main.css'
                         
                         
                         
-                            <button class='box1'>
+                            <button class='box1' onClick={() => navigate('/Pagos')}>
                                 Pagos
                                 <img src="https://i.postimg.cc/Hkx97Q27/pngwing-com-2.png" alt="" class='img10'/>
                             </button>
                         
 
                         
-                            <button class='box1'>
+                            <button class='box1' onClick={() => navigate('/Retiros')}>
                                 Retiros
                                 <img src="https://i.postimg.cc/bN6Q8ZhG/pngwing-com-3.png" alt="" class='img10'/>
                             </button>
@@ -88,11 +88,6 @@ import './Main.css'
                         <button class='box1'>
                             Solicita tu prestamo
                             <img src="https://i.postimg.cc/SNvHR7FM/pngwing-com-5.png" alt="" class='img10'/>
-                            </button>
-
-                        <button class='box1'>
-                            Paga tu prestamo
-                            <img src="https://i.postimg.cc/7LvcMHL4/pngwing-com-6.png" alt="" class='img10'/>
                             </button>
 
                         <button class='box1'>

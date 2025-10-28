@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#containermain{
+    display: flex;
+    flex-direction: row;
+    height: 900px;
+    width: 100%;
+}
+
+#left-menu{
+    background-color:rgb(199, 254, 212);    
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 15%;
+}
+
+#right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 90%;
+    min-width: 1250px;
+}
+
+#gestioncuenta{
+    /* background-color: lightgoldenrodyellow; */
+    background-color:rgb(199, 254, 212); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 556px;
+    width: 60%;
+    border-color: black;
+    border-style: dotted;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+#transacciones{
+    /*background-color: rgb(243, 243, 204);*/
+    background-color:rgb(199, 254, 212);
+    height: 200px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-color: black;
+    border-style: dotted;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+#box-transacciones{
+    display: flex;
+}
+
+#box-enviar{
+    background-image: url(https://i.postimg.cc/pT8ZLRBY/pngwing-com-1.png);
+    width: 100;
+}
+
+#box-pagos{
+    background-image: url(https://i.postimg.cc/Hkx97Q27/pngwing-com-2.png);
+}
+
+#box-retiros{
+    background-image: url(https://i.postimg.cc/bN6Q8ZhG/pngwing-com-3.png);
+}
+
+.img10{
+    width: 25%;
+}
+
+
+#solicitudprestamo{
+    /*background-color: rgb(238, 238, 200);*/
+    background-color:rgb(199, 254, 212);
+    height: 188px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#userimg{
+    height: 140px;
+    width: 60%;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+#nombre{
+    font-size: 30px;
+    font-family: serif;
+    font-style: italic;
+    color: rgb(82, 82, 81);
+    margin: 15px;
+}
+
+#saldo{
+    font-size: 30px;
+    font-family: serif;
+    margin-bottom: 0;
+}
+
+#Detalles{
+    border: 0px;
+    color: blue;
+    margin-left: 140px;
+}
+
+#tipocuenta{
+    font-size: 40px;
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+}
+
+#numerocuenta{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 160px;
+    font-style: italic;
+}
+
+#titulo-transacciones{
+    align-self: center;
+    font-size: 25px;
+}
+
+#titulo-prestamos{
+    align-self: center;
+    font-size: 25px;
+}
+
+#titulomain{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 100px;
+    color: darkgreen; 
+    border-color: black;
+    border-style: solid;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.box1{
+    /*background-color: rgb(174, 221, 185);*/
+    background-color:rgb(199, 254, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 5px;
+    border-radius: 50px;
+    border: 0;
+    opacity: 0.7;
+}
+
+.box1:hover{
+    width: 55%;
+    opacity: 1;
+    background-color: rgb(174, 221, 185);
+}
+
+#box-prestamos{
+    display: flex;
+}
+
+#box-contenido{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#box-cuenta{
+    background-color: rgb(174, 221, 185);
+    align-self: flex-start;
+    border-style: inset;
+    border-color: lightgray;
+    padding: 50px;
+}
+
+.movimientos{
+    color: gray;
+}
+
+#box-movimientos{
+    background-color: rgb(174, 221, 185);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;  
+    border-style: inset;
+    border-color: lightgray;
+}
+
+.movimientos{
+    margin: 0;
+}
+

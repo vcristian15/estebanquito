@@ -44,7 +44,7 @@ function Login(){
 
                         <div id="contraseña">
 
-                            <input type="text" 
+                            <input type="password" 
                             placeholder="Contraseña"
                             onChange={(e)=>setContraseña(e.target.value)}
                             class='login-info'

@@ -35,7 +35,7 @@ function Registro(){
 
                     <div id="contraseña">
 
-                        <input type="text" 
+                        <input type="password" 
                         placeholder="Contraseña"
                         class='login-info'
                         />

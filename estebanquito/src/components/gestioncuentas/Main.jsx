@@ -80,7 +80,7 @@ import './Main.css'
 
                     <div id='box-prestamos'>
 
-                        <button class='box1'>
+                        <button class='box1' onClick={() => navigate('/Simular')}>
                             Simular prestamo
                             <img src="https://i.postimg.cc/FzP8j0Yw/pngwing-com-4.png" alt="" class='img10'/>
                             </button>

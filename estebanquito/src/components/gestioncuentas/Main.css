@@ -46,7 +46,7 @@ body{
 
 #transacciones{
     /*background-color: rgb(243, 243, 204);*/
-    background-color:rgb(193, 246, 206); 
+    background-color:rgb(199, 254, 212);
     height: 200px;
     width: 60%;
     display: flex;
@@ -83,7 +83,7 @@ body{
 
 #solicitudprestamo{
     /*background-color: rgb(238, 238, 200);*/
-    background-color:rgb(189, 241, 201); 
+    background-color:rgb(199, 254, 212);
     height: 188px;
     width: 60%;
     display: flex;
@@ -161,7 +161,8 @@ body{
 }
 
 .box1{
-    background-color: rgb(174, 221, 185);
+    /*background-color: rgb(174, 221, 185);*/
+    background-color:rgb(199, 254, 212);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,7 +170,14 @@ body{
     margin: 5px;
     border-radius: 50px;
     border: 0;
-}   
+    opacity: 0.7;
+}
+
+.box1:hover{
+    width: 55%;
+    opacity: 1;
+    background-color: rgb(174, 221, 185);
+}
 
 #box-prestamos{
     display: flex;
@@ -183,20 +191,25 @@ body{
 }
 
 #box-cuenta{
+    background-color: rgb(174, 221, 185);
     align-self: flex-start;
+    border-style: inset;
+    border-color: lightgray;
+    padding: 50px;
 }
 
-#movimientos{
-    border-style: solid;
-    border-color: black;
+.movimientos{
+    color: gray;
 }
 
 #box-movimientos{
-    height: 230px;
+    background-color: rgb(174, 221, 185);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;  
+    gap: 13px;  
+    border-style: inset;
+    border-color: lightgray;
 }
 
 .movimientos{

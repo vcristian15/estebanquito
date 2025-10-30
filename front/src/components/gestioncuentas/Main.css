@@ -21,7 +21,6 @@ body{
 
 #right{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -179,11 +178,17 @@ body{
     width: 55%;
     opacity: 1;
     background-color: rgb(174, 221, 185);
+    cursor: pointer;
 }
 
 #box-prestamos{
     display: flex;
     justify-content: center;
+}
+
+#box-prestamos button:hover{
+    width: 33%;
+    cursor: pointer;
 }
 
 #box-contenido{
@@ -199,6 +204,7 @@ body{
     border-style: inset;
     border-color: lightgray;
     padding: 50px;
+    margin-bottom: 10px;
 }
 
 .movimientos{
@@ -213,6 +219,7 @@ body{
     gap: 13px;  
     border-style: inset;
     border-color: lightgray;
+    margin-bottom: 10px ;
 }
 
 .movimientos{

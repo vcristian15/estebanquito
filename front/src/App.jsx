@@ -7,6 +7,7 @@ import Transferencias from './components/transferencias/Transferencias'
 import Pagos from './components/pagos/Pagos'
 import Retiros from './components/retiros/Retiros'
 import Simular from './components/simular/Simular'
+import Solicitar from './components/solicitar/Solicitar'
 
 function App() {
 
@@ -30,6 +31,8 @@ function App() {
       <Route path='/retiros' element={<Retiros />}> </Route>
 
       <Route path='/simular' element={<Simular />}> </Route>
+
+      <Route path='/solicitar' element={<Solicitar />}> </Route>
 
 
       </Routes>  

@@ -1,0 +1,56 @@
+#titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnMasinfo{
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#imgMasinfo{
+    width: 100%;
+}
+
+#masinfo{
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 80px;
+    border-style: solid;
+} 
+
+#masinfo p{
+    text-align: center;
+    margin-right: 130px;
+    margin-left: 50px;
+}
+
+#masinfo-up{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly
+}
+
+#btnCerrar{
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#imgCerrar{
+    width: 100%;
+}
+
+
+

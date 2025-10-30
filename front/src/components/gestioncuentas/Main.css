@@ -183,6 +183,7 @@ body{
 
 #box-prestamos{
     display: flex;
+    justify-content: center;
 }
 
 #box-contenido{
@@ -218,3 +219,6 @@ body{
     margin: 0;
 }
 
+#box-prestamos .box1{
+    width: 30%;
+}

@@ -85,15 +85,16 @@ import './Main.css'
                             <img src="https://i.postimg.cc/FzP8j0Yw/pngwing-com-4.png" alt="" class='img10'/>
                             </button>
 
-                        <button class='box1'>
+                        <button class='box1' onClick={() => navigate('/Solicitar')}>
                             Solicita tu prestamo
                             <img src="https://i.postimg.cc/SNvHR7FM/pngwing-com-5.png" alt="" class='img10'/>
                             </button>
 
-                        <button class='box1'>
-                            Mas informacion
-                            <img src="https://i.postimg.cc/76wWdK7Q/pngwing-com-7.png" alt="" class='img10'/>
-                            </button>
+
+                        <div class='mas-info'>
+                            <p hidden>Antes de solicitar un préstamo, tenga en cuenta que las entidades bancarias evalúan factores como su historial crediticio, ingresos, estabilidad laboral y capacidad de pago. También pueden requerir garantías o un codeudor, según el tipo de crédito.
+                                Asegúrese de presentar la documentación completa, conocer la tasa de interés, los plazos y las condiciones del préstamo antes de firmar el contrato. Un buen manejo financiero y un historial positivo aumentan las posibilidades de aprobación.</p>
+                        </div>
                     </div>
 
                 </div>

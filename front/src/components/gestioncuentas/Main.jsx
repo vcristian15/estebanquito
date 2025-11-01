@@ -1,9 +1,12 @@
+import {useLocation} from 'react-router'
 import {useNavigate} from 'react-router'
 import './Main.css'    
 
     function Main(){
 
-    
+    const location = useLocation()
+    const correo = location.state
+
     const navigate = useNavigate()
     return(
         <div id="containermain">
@@ -13,7 +16,7 @@ import './Main.css'
                     <img src="https://i.postimg.cc/Pxs5bKQy/pngwing-com.png" alt=""  id='userimg'/>
 
                     <h1 id='nombre'>Cristian Alejandro Vanegas Escobar </h1>
-                    <p>correo@gmail.com</p>
+                    <p>{correo}</p>
                     <p> ID: 123456789</p>
 
                     <button>Reportes financieros</button>

@@ -11,22 +11,51 @@ function Login(){
     const navigate = useNavigate()
 
     const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [cantidad, setCantidad] = useState("")
 
-    const [contraseña, setContraseña] = useState("")
+    const [user, setUser] = useState({})
+    // const [contraseña, setContraseña] = useState({})
 
-    const validarUsuario = () => {
-        if(email == "correo@gmail.com" && contraseña == "123"){
-            navigate("/Main", {state:email})
+    const obtenerUsuario = () => {
+            const urlbase = "http://localhost:3000"
+            fetch(urlbase + "/usuarios")
+            .then((info) => info.json())
+            .then((data) =>  {
+                setUser(data)
+                setCantidad(data.length)
+            })
+            .catch((error) => console.log(error))
+
         }
-        else{
-            alert("Informacion incorrecta. Intentelo nuevamente")
+
+    const validarUsuario = () =>{   
+
+        let ingreso = false
+
+        obtenerUsuario()
+
+        for (let i = 0; i < cantidad; i++) {
+
+            if(email == user[i]?.email && password == user[i]?.contrasena){
+                navigate('/Main', {state:email})
+                ingreso = true
+                break
+            }
         }
+
+        if(ingreso == false){
+            alert("Informacion incorrecta.")
+        }
+
     }
 
-    return(
+
+
+            return(
             <div id="container">
                 <div  id='box'>
-                    <div id="titulo">   
+                    <div id="titulo">       
                         <h1> Iniciar sesión</h1>
                     </div>
 
@@ -34,10 +63,10 @@ function Login(){
 
                         <div id="email">
 
-                            <input type="text" 
+                            <input type="email" 
                                 placeholder="Email"
                                 onChange={(e)=>setEmail(e.target.value)}
-                                class='login-info'
+                                className='login-info'
                             />
 
                         </div>
@@ -46,8 +75,8 @@ function Login(){
 
                             <input type="password" 
                             placeholder="Contraseña"
-                            onChange={(e)=>setContraseña(e.target.value)}
-                            class='login-info'
+                            onChange={(e)=>setPassword(e.target.value)}
+                            className='login-info'
                             />
 
                         </div>
@@ -64,7 +93,10 @@ function Login(){
                 </div>
             </div>
     )
-
 }
+
+
+
+
 
 export default Login

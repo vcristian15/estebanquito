@@ -121,7 +121,7 @@ body{
 #Detalles{
     border: 0px;
     color: blue;
-    margin-left: 140px;
+    margin-left: 200px;
 }
 
 #tipocuenta{
@@ -129,6 +129,15 @@ body{
     font-family: serif;
     margin: 0;
     padding: 0;
+}
+
+#tipo{
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 160px;
+    font-style: italic;
+    text-transform: capitalize;
 }
 
 #numerocuenta{

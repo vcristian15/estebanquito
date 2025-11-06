@@ -12,45 +12,43 @@ function Login(){
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [cantidad, setCantidad] = useState("")
+    // const [cantidad, setCantidad] = useState("")
 
-    const [user, setUser] = useState({})
-    // const [contraseña, setContraseña] = useState({})
+    // const [user, setUser] = useState({})
 
-    const obtenerUsuario = () => {
+    const validarUsuario = () => {
             const urlbase = "http://localhost:3000"
             fetch(urlbase + "/usuarios")
             .then((info) => info.json())
             .then((data) =>  {
-                setUser(data)
-                setCantidad(data.length)
-            })
-            .catch((error) => console.log(error))
 
-        }
+                let ingreso = false
 
-    const validarUsuario = () =>{   
+                for (let i = 0; i < data.length; i++) {
 
-        let ingreso = false
+                if(email == data[i]?.email && password == data[i]?.contrasena){
+                    navigate('/Main', {state: {
+                        nombre : data[i]?.nombre,
+                        email : data[i]?.email,
+                        numero_cuenta : data[i]?.numero_cuenta,
+                        tipo_cuenta : data[i]?.tipo,
+                        saldo: data[i]?.saldo
 
-        obtenerUsuario()
 
-        for (let i = 0; i < cantidad; i++) {
 
-            if(email == user[i]?.email && password == user[i]?.contrasena){
-                navigate('/Main', {state:email})
-                ingreso = true
-                break
+                    }})
+                    ingreso = true
+                    break
+                }
             }
+
+            if(ingreso == false){
+                alert("Informacion incorrecta.")
+            }
+                })
+                .catch((error) => console.log(error))
+
         }
-
-        if(ingreso == false){
-            alert("Informacion incorrecta.")
-        }
-
-    }
-
-
 
             return(
             <div id="container">

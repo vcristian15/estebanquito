@@ -5,7 +5,7 @@ import './Main.css'
     function Main(){
 
     const location = useLocation()
-    const correo = location.state
+    const {nombre, email, numero_cuenta, tipo_cuenta, saldo} = location.state
 
     const navigate = useNavigate()
     return(
@@ -15,9 +15,8 @@ import './Main.css'
     
                     <img src="https://i.postimg.cc/Pxs5bKQy/pngwing-com.png" alt=""  id='userimg'/>
 
-                    <h1 id='nombre'>Cristian Alejandro Vanegas Escobar </h1>
-                    <p>{correo}</p>
-                    <p> ID: 123456789</p>
+                    <h1 id='nombre'>{nombre} </h1>
+                    <p>{email}</p>
 
                     <button>Reportes financieros</button>
 
@@ -34,8 +33,9 @@ import './Main.css'
 
                         <div  id='box-cuenta'>
                             <h1  id='tipocuenta'>Tipo de cuenta:</h1>
-                            <p  id='numerocuenta'>Nº 123456789</p>
-                            <h2 id='saldo'>Saldo: $000000</h2>
+                            <p id='tipo'>{tipo_cuenta}</p>
+                            <p  id='numerocuenta'>Nº {numero_cuenta}</p>
+                            <h2 id='saldo'>Saldo: $ {saldo}</h2>
                             <a href="" id='Detalles'>Detalles</a>
                         </div>
 

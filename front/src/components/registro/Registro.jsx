@@ -28,6 +28,7 @@ function Registro(){
                 saldo: 0
             }
 
+            
             fetch(urlbase + "/usuarios", {
                 method: "POST",
                 headers: {"Content-Type" : "application/json"},

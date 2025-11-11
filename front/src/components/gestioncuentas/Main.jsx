@@ -5,7 +5,7 @@ import './Main.css'
     function Main(){
 
     const location = useLocation()
-    const {nombre, email, numero_cuenta, tipo_cuenta, saldo} = location.state
+    const {idlogin, nombre, email, numero_cuenta, tipo_cuenta, saldo} = location.state
 
     const navigate = useNavigate()
     return(
@@ -16,6 +16,7 @@ import './Main.css'
                     <img src="https://i.postimg.cc/Pxs5bKQy/pngwing-com.png" alt=""  id='userimg'/>
 
                     <h1 id='nombre'>{nombre} </h1>
+                    <p>ID: {idlogin}</p>
                     <p>{email}</p>
 
                     <button>Reportes financieros</button>
@@ -55,7 +56,9 @@ import './Main.css'
                     <h1 id='titulo-transacciones'>Transacciones</h1>
                     <div id='box-transacciones'>
 
-                            <button class='box1' onClick={() =>navigate('/Transferencias')}>
+                            <button class='box1' onClick={() =>navigate('/Transferencias', {state: {
+                                idorigen : idlogin
+                            }})}>
                                 Transferencias
                                 <img src="https://i.postimg.cc/pT8ZLRBY/pngwing-com-1.png" alt="" class='img10'/>
                             </button>

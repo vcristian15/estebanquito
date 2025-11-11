@@ -28,6 +28,7 @@ function Login(){
 
                 if(email == data[i]?.email && password == data[i]?.contrasena){
                     navigate('/Main', {state: {
+                        idlogin: data[i]?.id,
                         nombre : data[i]?.nombre,
                         email : data[i]?.email,
                         numero_cuenta : data[i]?.numero_cuenta,

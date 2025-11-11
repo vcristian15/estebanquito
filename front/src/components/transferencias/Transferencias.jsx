@@ -1,25 +1,30 @@
 import './Transferencias.css'
 import {useNavigate} from 'react-router'
 import { useState } from 'react'
+import { useLocation } from 'react-router'
 
 
 function Transferencias(){
 
     const navigate = useNavigate()
+    const location = useLocation ()
+    const {idorigen} = location.state
+
 
     const [idcuenta, setIdcuenta] = useState("")
     const [monto, setMonto] = useState("")
 
     
     const crearTransferencia = () => {
-        const urlbase = "http://localhost:3000/transacciones"
+        const urlbase = "http://localhost:3000"
 
 
         const fechaactual = new Date().toISOString().split('T')[0];
 
         const nuevaTransferencia = {
-            idcuenta : idcuenta,
-            tipotransaccion : "transferencia",
+            id_origen : idorigen,
+            cuenta_id : idcuenta,
+            tipo : "transferencia",
             monto : monto,
             fecha : fechaactual
         }
@@ -51,7 +56,7 @@ function Transferencias(){
                         <input type="text" 
                             placeholder="ID cuenta a transferir"
                             onChange={(e) => setIdcuenta(e.target.value)}
-                            class='login-info'  
+                            className='login-info'  
                         />
 
                     </div>
@@ -61,9 +66,8 @@ function Transferencias(){
                         <input type="text" 
                             placeholder="$ 0"
                             onChange={(e) => setMonto(e.target.value)}
-                            class='login-info'
+                            className='login-info'
                         />
-
                     </div>
 
                 

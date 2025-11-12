@@ -8,6 +8,38 @@ function Solicitar(){
 
     const navigate = useNavigate()
 
+    const [idcuenta, setIdcuenta] = useState("")
+    const [monto, setMonto] = useState("")
+    const [tiempoaprestar, setTiempoaprestar] = useState("")
+
+
+    const crearPrestamo = () => {
+        const urlbase = "http://localhost:3000"
+
+        const fechaactual = new Date().toISOString().split('T')[0]
+
+        const nuevoPrestamo = {
+            usuario_id : idcuenta,
+            monto : monto,
+            plazo : tiempoaprestar,
+            estado : "aprobado",
+            fecha_solicitud : fechaactual
+        }
+
+        fetch(urlbase + "/prestamos", {
+            method: "POST",
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify(nuevoPrestamo)
+        })
+        .then((info) => info.json())
+        .then((data) => {
+            console.log("Prestamo creado: ", data)
+            alert("Prestamo aprobado.")
+        })
+            .catch((error) => console.log(error))
+    }
+
+
     return(
         <div id="container">
 
@@ -41,7 +73,8 @@ function Solicitar(){
 
                     <div id="id">
                         <input type="text" 
-                            placeholder="Número de cuenta"
+                            placeholder="ID de cuenta"
+                            onChange={(e) => setIdcuenta(e.target.value)}
                             class='login-info'  
                         />
 
@@ -51,6 +84,7 @@ function Solicitar(){
 
                         <input type="text" 
                             placeholder="$ 0"
+                            onChange={(e) => setMonto(e.target.value)}
                             class='login-info'
                         />
 
@@ -62,6 +96,7 @@ function Solicitar(){
                             id='tiempoasimular'
                             name='tiempoasimular'
                             placeholder='¿A cuantos meses?'
+                            onChange={(e) => setTiempoaprestar(e.target.value)}
                             class = 'login-info'
                         />
 
@@ -79,7 +114,7 @@ function Solicitar(){
 
                 <div id="botones">
 
-                    <button id='btnCrear'>Enviar</button>
+                    <button id='btnCrear' onClick={crearPrestamo}>Enviar</button>
                     <button id='btnIniciar' onClick={() => navigate(-1)}>Volver</button> 
 
                 </div>

@@ -19,7 +19,7 @@ function Transferencias(){
         const urlbase = "http://localhost:3000"
 
 
-        const fechaactual = new Date().toISOString().split('T')[0];
+        const fechaactual = new Date().toISOString().split('T')[0]
 
         const nuevaTransferencia = {
             id_origen : idorigen,

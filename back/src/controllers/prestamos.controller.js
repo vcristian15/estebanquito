@@ -9,9 +9,9 @@ const createPrestamo = async (req, res) => {
 
         const connection = await getConnection()
 
-        await connection.query("UPDATE usuarios SET saldo = saldo - ? WHERE id = ?", [monto, usuario_id])
+        await connection.query("UPDATE usuarios SET saldo = saldo + ? WHERE id = ?", [monto, usuario_id])
 
-        const result = await connecion.query('INSERT INTO prestamos SET ?', [data])
+        const result = await connection.query('INSERT INTO prestamos SET ?', [data])
 
         res.json({message: "Prestamo creado"})
         

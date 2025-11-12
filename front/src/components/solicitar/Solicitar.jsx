@@ -75,7 +75,7 @@ function Solicitar(){
                         <input type="text" 
                             placeholder="ID de cuenta"
                             onChange={(e) => setIdcuenta(e.target.value)}
-                            class='login-info'  
+                            className='login-info'  
                         />
 
                     </div>
@@ -85,7 +85,7 @@ function Solicitar(){
                         <input type="text" 
                             placeholder="$ 0"
                             onChange={(e) => setMonto(e.target.value)}
-                            class='login-info'
+                            className='login-info'
                         />
 
                     </div>
@@ -97,14 +97,14 @@ function Solicitar(){
                             name='tiempoasimular'
                             placeholder='¿A cuantos meses?'
                             onChange={(e) => setTiempoaprestar(e.target.value)}
-                            class = 'login-info'
+                            className = 'login-info'
                         />
 
                         <datalist id='meses'>
-                            <option value="6 meses"></option>
-                            <option value="12 meses"></option>
-                            <option value="18 meses"></option>
-                            <option value="24 meses"></option>
+                            <option value="6"></option>
+                            <option value="12"></option>
+                            <option value="18"></option>
+                            <option value="24"></option>
                         </datalist>
 
                     </div>

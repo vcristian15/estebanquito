@@ -13,6 +13,8 @@ router.delete('/usuarios/:id', methodsUsers.deleteUser)
 
 router.post('/transacciones', methodsTransactions.createTransaction)
 
+router.post('/transaccionespago', methodsTransactions.createRetiro)
+
 router.get('/transacciones', methodsTransactions.getTransaction)
 
 router.delete('/transacciones/:id', methodsTransactions.deleteTransaction)

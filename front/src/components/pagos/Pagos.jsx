@@ -1,9 +1,13 @@
 import {useNavigate} from 'react-router'
+import { useLocation } from 'react-router'
 import './Pagos.css'
 
 function Pagos(){
 
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const{deuda} = location.state
     
     return(
         <div id="container">
@@ -14,7 +18,7 @@ function Pagos(){
 
                 <div id="info">
 
-                        <h1 id='deuda'>Deuda: $00000</h1>
+                        <h1 id='deuda'>Deuda: $ {deuda}</h1>
 
                     <div id="id">
                         <input type="text" 

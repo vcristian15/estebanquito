@@ -27,17 +27,27 @@ function Login(){
                 for (let i = 0; i < data.length; i++) {
 
                 if(email == data[i]?.email && password == data[i]?.contrasena){
-                    navigate('/Main', {state: {
-                        idlogin: data[i]?.id,
-                        nombre : data[i]?.nombre,
-                        email : data[i]?.email,
-                        numero_cuenta : data[i]?.numero_cuenta,
-                        tipo_cuenta : data[i]?.tipo,
-                        saldo: data[i]?.saldo
+
+                    const idUsuario = data[i].id
+
+                    fetch(urlbase + "/prestamos")
+                    .then(res => res.json())
+                    .then(lista => lista.filter(p => p.usuario_id === idUsuario))
+                    .then(prestamosusuario => {
+
+                        navigate('/Main', {state: {
+                            idlogin: data[i]?.id,
+                            nombre : data[i]?.nombre,   
+                            email : data[i]?.email,
+                            numero_cuenta : data[i]?.numero_cuenta,
+                            tipo_cuenta : data[i]?.tipo,
+                            saldo: data[i]?.saldo,
+                            prestamos : prestamosusuario
+                    }}) 
+                    })
 
 
 
-                    }})
                     ingreso = true
                     break
                 }

@@ -13,6 +13,7 @@ const createTransaction = async(req, res) => {
         
         const saldoActual = origen[0].saldo
 
+
         if(saldoActual < monto){
             return res.status(400).json({ message: "Saldo insuficiente" });
         }
@@ -36,6 +37,36 @@ const createTransaction = async(req, res) => {
         console.log(error)
     }
 }
+
+const createRetiro = async(req , res) => {
+
+    try{
+    
+    const {cuenta_id, tipo, monto, fecha} = req.body;
+
+    const data = {cuenta_id, tipo, monto, fecha}
+
+    const connection = await getConnection()
+
+    const cuentaretiro = await connection.query("SELECT saldo FROM usuarios WHERE id = ?", [cuenta_id])
+
+    const saldocuenta = cuentaretiro[0].saldo
+
+    if (saldocuenta < monto){
+        return res.status(400).json({ message: "Saldo insuficiente" });
+    }
+
+    await connection.query("UPDATE usuarios SET saldo = saldo - ? WHERE id = ?", [monto, cuenta_id])
+
+    const result = await connection.query("INSERT INTO transacciones SET ?", [data])
+
+    res.json({message: "Retiro creado"})
+
+    } catch(error){
+        console.log(error)
+    }
+}
+
 
 const getTransaction = async(req, res) => {
     try {
@@ -75,6 +106,8 @@ export const methodsTransactions = {
     createTransaction,
 
     getTransaction,
+    
+    createRetiro,
 
     deleteTransaction
 

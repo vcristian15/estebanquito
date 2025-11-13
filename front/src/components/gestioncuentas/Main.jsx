@@ -5,7 +5,7 @@ import './Main.css'
     function Main(){
 
     const location = useLocation()
-    const {idlogin, nombre, email, numero_cuenta, tipo_cuenta, saldo} = location.state
+    const {idlogin, nombre, email, numero_cuenta, tipo_cuenta, saldo, prestamos} = location.state
 
     const navigate = useNavigate()
     return(
@@ -65,14 +65,18 @@ import './Main.css'
                         
                         
                         
-                            <button class='box1' onClick={() => navigate('/Pagos')}>
+                            <button class='box1' onClick={() => navigate('/Pagos', {state: {
+                                deuda : prestamos[0]?.monto
+                            }})}>
                                 Pagos
                                 <img src="https://i.postimg.cc/Hkx97Q27/pngwing-com-2.png" alt="" class='img10'/>
                             </button>
                         
 
                         
-                            <button class='box1' onClick={() => navigate('/Retiros')}>
+                            <button class='box1' onClick={() => navigate('/Retiros', {state : {
+                                saldo : saldo
+                            }})}>
                                 Retiros
                                 <img src="https://i.postimg.cc/bN6Q8ZhG/pngwing-com-3.png" alt="" class='img10'/>
                             </button>

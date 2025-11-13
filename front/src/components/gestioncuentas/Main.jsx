@@ -66,7 +66,7 @@ import './Main.css'
                         
                         
                             <button class='box1' onClick={() => navigate('/Pagos', {state: {
-                                deuda : prestamos[0]?.monto
+                                deuda : prestamos
                             }})}>
                                 Pagos
                                 <img src="https://i.postimg.cc/Hkx97Q27/pngwing-com-2.png" alt="" class='img10'/>

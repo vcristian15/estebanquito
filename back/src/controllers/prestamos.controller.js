@@ -20,6 +20,30 @@ const createPrestamo = async (req, res) => {
     }
 }
 
+const createPago = async(req , res) => {
+
+    try{
+    
+    const {usuario_id, monto, plazo, estado, fecha_solicitud} = req.body;
+
+    const data = {usuario_id, monto, plazo, estado, fecha_solicitud}
+
+    const connection = await getConnection()
+
+    const result = await connection.query("INSERT INTO transacciones SET ?", [{
+        cuenta_id : usuario_id,
+        tipo : "pago",
+        monto : monto,
+        fecha : fecha_solicitud
+    }])
+
+    res.json({message: "Pago creado"})
+
+    } catch(error){
+        console.log(error)
+    }
+}
+
 const getPrestamo = async (req, res) => {
     try {
 
@@ -55,6 +79,8 @@ const deletePrestamo = async (req, res) => {
 
 export const methodsPrestamos = {
     createPrestamo,
+
+    createPago,
 
     getPrestamo,
 

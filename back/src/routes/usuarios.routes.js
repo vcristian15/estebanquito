@@ -13,13 +13,15 @@ router.delete('/usuarios/:id', methodsUsers.deleteUser)
 
 router.post('/transacciones', methodsTransactions.createTransaction)
 
-router.post('/transaccionespago', methodsTransactions.createRetiro)
+router.post('/transaccionesretiro', methodsTransactions.createRetiro)
 
 router.get('/transacciones', methodsTransactions.getTransaction)
 
 router.delete('/transacciones/:id', methodsTransactions.deleteTransaction)
 
 router.post('/prestamos', methodsPrestamos.createPrestamo)
+
+router.post('/prestamospago', methodsPrestamos.createPago)
 
 router.get('/prestamos', methodsPrestamos.getPrestamo)
 

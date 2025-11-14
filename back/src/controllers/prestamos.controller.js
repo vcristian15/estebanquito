@@ -30,17 +30,24 @@ const createPago = async(req , res) => {
 
     const connection = await getConnection()
 
-    const result = await connection.query("INSERT INTO transacciones SET ?", [{
+    await connection.query("INSERT INTO transacciones SET ?", [{
         cuenta_id : usuario_id,
         tipo : "pago",
         monto : monto,
         fecha : fecha_solicitud
     }])
 
+    await connection.query("UPDATE prestamos SET estado = 'pagado' WHERE usuario_id = ?", [usuario_id])
+
+    await connection.query("UPDATE usuarios SET saldo = saldo - ? WHERE id =?", [monto, usuario_id])
+
+    await connection.query("UPDATE prestamos SET monto = monto - ? WHERE id =?", [monto, usuario_id])
+
     res.json({message: "Pago creado"})
 
     } catch(error){
         console.log(error)
+        return res.status(500).json({error: error.message})
     }
 }
 

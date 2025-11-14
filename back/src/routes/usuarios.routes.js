@@ -19,6 +19,8 @@ router.get('/transacciones', methodsTransactions.getTransaction)
 
 router.delete('/transacciones/:id', methodsTransactions.deleteTransaction)
 
+router.get("/transacciones/:usuario_id", methodsTransactions.ultimastransacciones)
+
 router.post('/prestamos', methodsPrestamos.createPrestamo)
 
 router.post('/prestamospago', methodsPrestamos.createPago)
@@ -26,7 +28,6 @@ router.post('/prestamospago', methodsPrestamos.createPago)
 router.get('/prestamos', methodsPrestamos.getPrestamo)
 
 router.delete('/prestamos/:id', methodsPrestamos.deletePrestamo)
-
 
 
 export default router

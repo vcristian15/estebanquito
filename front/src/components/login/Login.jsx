@@ -35,6 +35,7 @@ function Login(){
                     .then(lista => lista.filter(p => p.usuario_id === idUsuario))
                     .then(prestamosusuario => {
 
+
                         navigate('/Main', {state: {
                             idlogin: data[i]?.id,
                             nombre : data[i]?.nombre,   

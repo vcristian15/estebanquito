@@ -38,7 +38,7 @@ function Pagos(){
         })
             .catch((error) => console.log(error))
 
-    }
+    }   
     
     return(
         <div id="container">

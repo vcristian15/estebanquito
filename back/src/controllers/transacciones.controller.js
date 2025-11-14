@@ -100,6 +100,22 @@ const deleteTransaction = async(req, res) => {
     }
 }
 
+const ultimastransacciones = async(req, res) => {
+    try {
+
+        const {usuario_id } = req.params
+
+        const connection = await getConnection()
+
+        const result = await connection.query("SELECT tipo, monto FROM transacciones WHERE cuenta_id = ? ORDER BY fecha DESC LIMIT 5", [usuario_id])
+
+        res.json(result[0])
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 
 
 export const methodsTransactions = {
@@ -109,6 +125,8 @@ export const methodsTransactions = {
     
     createRetiro,
 
-    deleteTransaction
+    deleteTransaction,
+
+    ultimastransacciones
 
 }
